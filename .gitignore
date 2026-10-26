@@ -1,0 +1,73 @@
+# ─── datasets and large artifacts ──────────────────────────────
+# Never commit these. See docs/DATA.md for where they actually live.
+*.zip
+*.tgz
+*.tar
+*.tar.gz
+*.npz
+*.npy
+*.h5
+*.hdf5
+data/
+!data/README.md
+!data/manifest.json
+
+# model checkpoints — published to HuggingFace, not git
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+checkpoints/
+runs/
+wandb/
+lightning_logs/
+
+# derived caches
+cache/
+.cache/
+*_cache/
+frames_*.npz
+
+# ─── notebooks ─────────────────────────────────────────────────
+.ipynb_checkpoints/
+*-checkpoint.ipynb
+
+# ─── python ────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ─── secrets — nothing here, ever ──────────────────────────────
+.env
+.env.*
+*.token
+*.pem
+*.key
+.netrc
+credentials.json
+service_account*.json
+
+# ─── editors and OS ────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ─── HPRC / Slurm ──────────────────────────────────────────────
+slurm-*.out
+*.sbatch.log

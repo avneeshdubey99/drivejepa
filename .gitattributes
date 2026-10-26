@@ -1,0 +1,21 @@
+*.ipynb filter=nbstripout
+*.zpln filter=nbstripout
+*.ipynb diff=ipynb
+# Normalise all text to LF in the repository, whatever the OS writes locally.
+# Windows checkouts stay readable; Colab and Grace get the LF they require.
+* text=auto eol=lf
+
+# Shell and job scripts MUST be LF — a CRLF .sbatch fails on Slurm with
+# "bad interpreter: /bin/bash^M", which does not look like a line-ending problem.
+*.sh   text eol=lf
+*.bash text eol=lf
+*.sbatch text eol=lf
+
+# Binary: never touch these
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.pt  binary
+*.npz binary
